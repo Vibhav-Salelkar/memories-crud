@@ -16,7 +16,7 @@ function Form({currentId, setCurrentId}) {
     })
     const post = useSelector((state) => {
         // @ts-ignore
-        return currentId ? state.posts.find((post)=> post._id === currentId) : null;
+        return currentId ? state.posts.posts.find((post)=> post._id === currentId) : null;
     })
     const classes = useStyles();
     const dispatch = useDispatch();
@@ -61,7 +61,7 @@ function Form({currentId, setCurrentId}) {
     } 
 
     return (
-        <Paper className={classes.paper}>
+        <Paper elevation={6} className={classes.paper}>
             <form autoComplete="off" noValidate className={`${classes.form} ${classes.root}`} onSubmit={handleSubmit} >
                 <Typography variant="h6"> {currentId? 'Editing' : 'Creating'} a Memory</Typography>
                 <TextField 

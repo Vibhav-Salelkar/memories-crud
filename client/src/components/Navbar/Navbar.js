@@ -8,6 +8,9 @@ import useStyles from "./styles";
 import memories from "../../images/memories.png"
 import { Link, useLocation } from 'react-router-dom';
 
+import memoriesLogo from '../../images/memoriesLogo.png';
+import memoriesText from '../../images/memoriesText.png';
+
 function Navbar(props) {
     const classes = useStyles();
     const [user, setUser] = useState(JSON.parse(localStorage.getItem('profile')));
@@ -38,10 +41,10 @@ function Navbar(props) {
 
     return (
         <AppBar className={classes.appBar} position="static" color="inherit">
-            <div className={classes.brandContainer}>
-                <Typography component={Link} to="/" className={classes.heading} align="center" variant="h2">Memories</Typography>
-                <img className={classes.image} src={memories} alt ="memories" height="60"/>
-            </div>
+            <Link to="/" className={classes.brandContainer}>
+                <img className={classes.image} src={memoriesText} alt ="icon" height="45px"/>
+                <img className={classes.image} src={memoriesLogo} alt ="icon" height="40px"/>
+            </Link>
             <Toolbar className={classes.toolbar}>
                 {user ? (
                     <div>
