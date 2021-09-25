@@ -10,4 +10,4 @@ Memories app is MERN CRUD app developed using following Tech Stack:
 Project also uses material UI for styling and Redux for state Management.
 Handles Important features like Pagination, Search, Routing using React Router and many more.
 
-Project follows best practises in React and Express, coding standards, better folder structuring and standard practises of development.
+Project follows best practises in React and Express, coding standards, better folder structuring and standard practices of development.
