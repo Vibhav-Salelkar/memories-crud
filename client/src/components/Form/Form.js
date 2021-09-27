@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { TextField, Button, Typography, Paper} from "@material-ui/core";
 import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
+import {useHistory} from 'react-router-dom';
 
 import useStyles from "./styles";
 import {createPost, updatePost} from "../../actions/posts";
@@ -19,6 +20,7 @@ function Form({currentId, setCurrentId}) {
         return currentId ? state.posts.posts.find((post)=> post._id === currentId) : null;
     })
     const classes = useStyles();
+    const history = useHistory();
     const dispatch = useDispatch();
 
     useEffect(()=> {
@@ -35,7 +37,7 @@ function Form({currentId, setCurrentId}) {
         if(currentId) {
             dispatch(updatePost(currentId, {...postData, name: user?.result?.name}))
         }else{
-            dispatch(createPost({...postData, name: user?.result?.name}))
+            dispatch(createPost({...postData, name: user?.result?.name}, history))
         }
         clear();
     }
