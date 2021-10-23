@@ -106,9 +106,10 @@ function Post({ post, setCurrentId }) {
           <Button
             size="small"
             color="primary"
+            className={classes.deleteIcon}
             onClick={() => handleDelete(post._id)}
           >
-            <DeleteIcon fontSize="small" />
+            <DeleteIcon fontSize="small" className={classes.deleteIconSvg} />
             Delete
           </Button>
         }

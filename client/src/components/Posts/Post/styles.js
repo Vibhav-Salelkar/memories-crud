@@ -53,4 +53,10 @@ export default makeStyles({
     display: 'block',
     textAlign: 'initial',
   },
+  deleteIcon: {
+    color: '#e20c0c'
+  },
+  deleteIconSvg: {
+    fill: '#e20c0c'
+  }
 });
