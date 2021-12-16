@@ -7,6 +7,8 @@ Memories app is MERN CRUD app developed using following Tech Stack:
 3.  Node
 4.  MongoDB
 
+Server is hosted on Heroku and Client on Netlify
+
 Project also uses material UI for styling and Redux for state Management.
 Handles Important features like Pagination, Search, Routing using React Router and many more.
 
