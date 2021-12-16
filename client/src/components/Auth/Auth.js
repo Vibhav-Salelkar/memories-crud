@@ -46,6 +46,19 @@ function Auth(props) {
     }
   };
 
+  const handleTestClick = () => {
+    setFormData({
+      ...formData,
+      email:"test@email.com",
+      password:"test@123"
+    })
+    if(isSignUp) {
+      dispatch(signin(formData, history));
+    }else {
+      dispatch(signin(formData, history));
+    }  
+  }
+
   const handleChange = (e) => {
     let currentInput = e.target.name;
     let currentInputValue = e.target.value;
@@ -128,6 +141,16 @@ function Auth(props) {
             )}
           </Grid>
           <Button
+            onClick={handleTestClick}
+            fullWidth
+            variant="contained"
+            color="primary"
+            className={classes.submit}
+            style={{marginBottom: "-0.5rem"}}
+          >
+            {"Sign in with test credentials"}
+          </Button>
+          <Button
             type="submit"
             fullWidth
             variant="contained"
@@ -136,7 +159,7 @@ function Auth(props) {
           >
             {isSignUp ? "Sign Up" : "Sign In"}
           </Button>
-          <GoogleLogin
+          {/* <GoogleLogin
             clientId="82456334507-1av5kvavi5u31247qs1arhffsi524uek.apps.googleusercontent.com"
             render={(renderProps) => (
               <Button
@@ -154,7 +177,8 @@ function Auth(props) {
             onSuccess={googleSucess}
             onFailure={googleFailure}
             cookiePolicy="single_host_origin"
-          />
+          /> */}
+          
           <Grid container justifyContent="flex-end">
             <Grid item>
               <Button onClick={switchMode}>
