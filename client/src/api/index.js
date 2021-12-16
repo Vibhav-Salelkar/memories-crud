@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const API = axios.create( {baseURL: 'http://localhost:5000'})
+const API = axios.create( {baseURL: 'https://social-memories-app.herokuapp.com'})
 
 //function that runs on each one of request
 API.interceptors.request.use( (req) => {
