@@ -97,7 +97,7 @@ function Post({ post, setCurrentId }) {
         </Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
-            {post.message}
+            {post.message.substring(0,200)+'...'}
           </Typography>
         </CardContent>
       </ButtonBase>
