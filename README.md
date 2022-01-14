@@ -1,6 +1,6 @@
 # Social Media - CRUD Application
 
-Memories app is MERN CRUD app developed using following Tech Stack:
+VSocial is MERN CRUD app developed using following Tech Stack:
 
 1.  React
 2.  Express
@@ -10,6 +10,6 @@ Memories app is MERN CRUD app developed using following Tech Stack:
 Server is hosted on Heroku and Client on Netlify
 
 Project also uses material UI for styling and Redux for state Management.
-Handles Important features like Pagination, Search, Routing using React Router and many more.
+Handles Important features like Pagination, Search, Routing, Auth, Comments using React Router, JWT and many more.
 
 Project follows best practises in React and Express, coding standards, better folder structuring and standard practices of development.
