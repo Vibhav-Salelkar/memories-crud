@@ -89,14 +89,14 @@ function Home(props) {
           justifyContent="space-between"
           alignItems="stretch"
           spacing={3}
-          className={classes.gridContainer}
+          className={classes.postGridContainer}
         >
           <Grid item xs={12} sm={6} md={9}>
             <Posts setCurrentId={setCurrentId} />
           </Grid>
           <Grid item xs={12} sm={6} md={3}>
             <AppBar
-              className={classes.appBarSearch}
+              className={classes.searchPosts}
               position="static"
               color="inherit"
             >
@@ -124,7 +124,7 @@ function Home(props) {
               </Button>
             </AppBar>
             {(!searchQuery && !tags.length) && (
-              <Paper elevation={6} className={classes.pagination}>
+              <Paper elevation={6} className={classes.postsPagination}>
               <Pagination page={page}/>
               </Paper>
             )} 

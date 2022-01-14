@@ -89,15 +89,17 @@ function Post({ post, setCurrentId }) {
         }
         <div className={classes.details}>
           <Typography variant="body2" color="textSecondary">
-            {post.tags.map((tag) => `#${tag} `)}
+            {post.tags.map((tag) => {
+              return `#${tag} `
+            })}
           </Typography>
         </div>
         <Typography className={classes.title} variant="h5" gutterBottom>
-          {post.title}
+          {post.title.length > 23 ? post.title.substring(0,23)+'...' : post.title}
         </Typography>
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p" gutterBottom>
-            {post.message.substring(0,200)+'...'}
+            {post.message.length > 200 ? post.message.substring(0,200)+'...': post.message}
           </Typography>
         </CardContent>
       </ButtonBase>

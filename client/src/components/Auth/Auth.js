@@ -12,11 +12,11 @@ import {
 } from "@material-ui/core";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 
-import { GoogleLogin } from "react-google-login";
+// import { GoogleLogin } from "react-google-login";
 
 import useStyles from "./styles";
 import Input from "./Input";
-import Icon from "./Icon";
+// import Icon from "./Icon";
 
 import {signin, signup} from '../../actions/auth';
 
@@ -74,21 +74,21 @@ function Auth(props) {
     setShowPassword(false);
   };
 
-  const googleSucess = async(res) => {
-    const result = res?.profileObj;
-    const token = res?.tokenId;
+  // const googleSucess = async(res) => {
+  //   const result = res?.profileObj;
+  //   const token = res?.tokenId;
 
-    try {
-        dispatch({ type: 'AUTH', data: { result, token} });
-        history.push('/')
-    } catch(error) {
-        console.log(error);
-    }
-  }
+  //   try {
+  //       dispatch({ type: 'AUTH', data: { result, token} });
+  //       history.push('/')
+  //   } catch(error) {
+  //       console.log(error);
+  //   }
+  // }
 
-  const googleFailure = () => {
-      console.log("Google Sign In was unsuccessful. Try Again Later.");
-  }
+  // const googleFailure = () => {
+  //     console.log("Google Sign In was unsuccessful. Try Again Later.");
+  // }
 
   return (
     <Container component="main" maxWidth="xs">
