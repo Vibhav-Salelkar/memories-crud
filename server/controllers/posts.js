@@ -57,8 +57,6 @@ export const getPostBySearch = async (req, res) => {
 export const createPost = async (req, res) => {
     const post = req.body;
 
-    post.tags = post.tags.split(',');
-
     //creator is taken from user authenticated and not manually entered in form UI
     const newPost = new PostMessage({...post, creator: req.userId, createdAt: new Date().toISOString()});
 
