@@ -1,60 +1,66 @@
 import { makeStyles } from '@material-ui/core/styles';
-import { deepPurple } from '@material-ui/core/colors';
 
-export default makeStyles((theme) => ({
-  appBar: {
-    borderRadius: 15,
-    margin: '30px 0',
+export default makeStyles(() => ({
+  navBar: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    padding: '10px 50px',
-    ['@media (max-width:968px)']: { 
+    borderRadius: 10,
+    margin: '0 0 10px 0',
+    boxShadow: '0 2px 5px 0 rgba(0,0,0,0.1)',
+    padding: '5px 0 5px 25px',
+    ['@media (max-width:600px)']: { 
       flexDirection: 'column',
     },
   },
-  heading: {
-    color: 'rgba(0,183,255, 1)',
-    textDecoration: 'none',
-    ['@media (max-width:500px)']: { 
-      fontSize: '3rem'
-    },
+  navLogoLink: {
+    display: 'flex',
+    alignItems: 'center',
+    textDecoration: "none"
   },
-  image: {
-    marginLeft: '10px',
-    marginTop: '5px'
+  navLogo: {
+    fontSize: "2rem",
+    fontFamily: "Roboto Slab",
+    boxSizing: "border-box",
+    color: "#ff3f6c"
   },
-  toolbar: {
+  navLogoSecondary: {
+    color: "#333"
+  },
+  navProfileSection: {
     display: 'flex',
     justifyContent: 'flex-end',
     width: '400px',
-    ['@media (max-width:500px)']: { 
+    ['@media (max-width:600px)']: { 
       justifyContent: 'center',
     },
   },
-  profile: {
+  navUserProfile: {
     display: 'flex',
     justifyContent: 'space-between',
-    width: '400px',
-    ['@media (max-width:500px)']: { 
+    width: '80%',
+    ['@media (max-width:600px)']: { 
       flexDirection: 'column',
       alignItems: 'center',
       width: '100%',
-      marginTop: 20
+      marginTop: 15
     },
   },
-  userName: {
+  navProfile: {
+    display: 'flex',
+  },
+  navUserName: {
+    marginLeft: '0.6rem',
     display: 'flex',
     textAlign: 'center',
     alignItems: 'center',
+    ['@media (max-width:600px)']: { 
+      marginBottom: 25
+    },
   },
-  brandContainer: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  purple: {
-    color: theme.palette.getContrastText(deepPurple[500]),
-    backgroundColor: deepPurple[500],
+  navAvatarColor: {
+    color: '#fff',
+    backgroundColor: '#612897',
   },
 }));

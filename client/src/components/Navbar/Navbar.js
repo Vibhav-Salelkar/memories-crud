@@ -5,11 +5,8 @@ import {useDispatch} from 'react-redux';
 import decode from 'jwt-decode';
 
 import useStyles from "./styles";
-import memories from "../../images/memories.png"
 import { Link, useLocation } from 'react-router-dom';
 
-import memoriesLogo from '../../images/memoriesLogo.png';
-import memoriesText from '../../images/memoriesText.png';
 
 function Navbar(props) {
     const classes = useStyles();
@@ -40,19 +37,20 @@ function Navbar(props) {
     }, [location]);
 
     return (
-        <AppBar className={classes.appBar} position="static" color="inherit">
-            <Link to="/" className={classes.brandContainer}>
-                <img className={classes.image} src={memoriesText} alt ="icon" height="45px"/>
-                <img className={classes.image} src={memoriesLogo} alt ="icon" height="40px"/>
+        <AppBar className={classes.navBar} position="static" color="inherit">
+            <Link to="/" className={classes.navLogoLink}>
+                <span className={classes.navLogo}>
+                    V<span className={classes.navLogoSecondary}>Social</span>
+                </span>
             </Link>
-            <Toolbar className={classes.toolbar}>
+            <Toolbar className={classes.navProfileSection}>
                 {user ? (
-                    <div>
-                        <div className={classes.profile}>
-                            <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageUrl}>{ user.result.name.charAt(0)}</Avatar>
-                            <Typography className={classes.userName} variant='h6'>{user.result.name}</Typography>
-                            <Button variant="contained" color="secondary" onClick={logout}>Logout</Button> 
+                    <div className={classes.navUserProfile}>
+                        <div className={classes.navProfile}>
+                            <Avatar className={classes.navAvatarColor} alt={user.result.name} src={user.result.imageUrl}>{ user.result.name.charAt(0)}</Avatar>
+                            <Typography className={classes.navUserName} variant='h6'>{user.result.name}</Typography>
                         </div>
+                        <Button variant="contained" color="secondary" onClick={logout}>Logout</Button> 
                     </div>
                 ) : (
                     <Button component={Link} to="/auth" variant="contained" color="primary">
