@@ -120,12 +120,14 @@ function Auth(props) {
             )}
             <Input
               name="email"
+              value={formData.email}
               label="Email Address"
               handleChange={handleChange}
               type="email"
             />
             <Input
               name="password"
+              value={formData.password}
               label="Password"
               handleChange={handleChange}
               type={showPassword ? "text" : "password"}

@@ -12,6 +12,7 @@ function Input({
   autoFocus=false,
   handleChange,
   handleShowPassword=null,
+  value = null
 }) {
   return (
     <Grid item xs={12} sm={half ? 6 : 12}>
@@ -20,6 +21,7 @@ function Input({
         onChange={handleChange}
         variant="outlined"
         required
+        value={value}
         fullWidth
         label={label}
         autoFocus={autoFocus}
