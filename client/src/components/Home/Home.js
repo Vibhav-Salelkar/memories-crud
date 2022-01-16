@@ -103,7 +103,7 @@ function Home(props) {
               <TextField
                 name="search"
                 variant="outlined"
-                label="Search Memories"
+                label="Search Posts"
                 fullWidth
                 value={search}
                 onKeyPress={handleKeyPress}
